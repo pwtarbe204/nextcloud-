@@ -101,9 +101,11 @@ Nextcloud is an open source platform that allows you to deploy a service to stor
   - Set up an admin account, enter the newly configured database information.
 
 ## 🔒 Cấu hình SSL với Let's Encrypt
+  #### Install Certbot
   ```sh
   sudo apt install certbot python3-certbot-apache
-  ```  
+  ```
+  #### Configure `your_domain.conf`
   ```sh
   sudo nano /etc/apache2/sites-available/your_domain.conf
   ```
@@ -116,18 +118,18 @@ Nextcloud is an open source platform that allows you to deploy a service to stor
   ```sh
   sudo apache2ctl configtest
   ```
+  #### Reload apache service
   ```sh
   sudo systemctl reload apache2
+  ```
+  #### Allow Apache full in ufw
+  ```sh
+  sudo ufw delete allow 'Apache'
   ```
   ```sh
   sudo ufw allow 'Apache Full'
   ```
-  ```sh
-  sudo ufw delete allow 'Apache'
-  ```
+  #### Get Certificate SSL
   ```sh
   sudo certbot --apache
-  ```
-  ```sh
-  sudo ufw delete allow 'Apache'
   ```
