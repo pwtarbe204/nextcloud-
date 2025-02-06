@@ -1,6 +1,6 @@
 # 🚀 Nextcloud Setup Guide
 ## Component
-  Ubuntu
+  - [Ubuntu Server]
 
 ## 📌 Mục lục
 - [Introduction](#giới-thiệu)
