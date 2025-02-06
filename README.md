@@ -1,6 +1,6 @@
 # 🚀 Nextcloud Setup Guide
-
-Nextcloud là một nền tảng mã nguồn mở cho phép bạn triển khai dịch vụ lưu trữ và chia sẻ dữ liệu cá nhân trên máy chủ riêng, tương tự như Google Drive hay Dropbox nhưng với khả năng kiểm soát hoàn toàn dữ liệu. Nó được thiết kế để bảo mật thông tin và đáp ứng nhu cầu lưu trữ đám mây của cá nhân, tổ chức, hoặc doanh nghiệp.
+## Component
+  Ubuntu
 
 ## 📌 Mục lục
 - [Introduction](#giới-thiệu)
@@ -12,7 +12,8 @@ Nextcloud là một nền tảng mã nguồn mở cho phép bạn triển khai d
 - [Backup and Restore data](docs/backup.md)
 
 ## 📖 Introduction
-Nextcloud là một nền tảng lưu trữ đám mây tự quản lý, giúp bạn đồng bộ và chia sẻ tệp một cách an toàn.
+
+Nextcloud is an encrypted open source platform that allows you to develop a service to store and share personal data on a private server, similar to Google Drive or Dropbox but with complete control over the data. It is designed for information security and meets the cloud storage needs of individuals, organizations or businesses.
 
 ## 📥 Install Nextcloud
 Xem hướng dẫn chi tiết tại [docs/setup.md](docs/setup.md).
