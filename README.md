@@ -23,8 +23,8 @@ Trước khi cài đặt, bạn cần chuẩn bị các thành phần sau:
 Nextcloud là một nền tảng lưu trữ đám mây tự quản lý, giúp bạn đồng bộ và chia sẻ tệp một cách an toàn.
 
 ## 📥 Cài đặt Nextcloud
-- Update and install necessary ppackages
-* ```sudo apt update && sudo apt upgrade -y```
+- Update and install necessary packages
+    ```[sudo apt update && sudo apt upgrade -y]```
 
 ## 🌐 Cấu hình Web Server
 Bạn có thể sử dụng Apache hoặc Nginx:
