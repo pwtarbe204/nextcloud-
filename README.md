@@ -23,10 +23,24 @@ Trước khi cài đặt, bạn cần chuẩn bị các thành phần sau:
 Nextcloud là một nền tảng lưu trữ đám mây tự quản lý, giúp bạn đồng bộ và chia sẻ tệp một cách an toàn.
 
 ## 📥 Cài đặt Nextcloud
-- Update and install necessary packages
+### Update and install neccessary packages
+- Step 1: System update
     ```sh
     sudo apt update && sudo apt upgrade -y
     ```
+- Step 2: Install Apache and neccessaries packages
+  ```sh
+  sudo apt install apache2 unzip curl -y
+  sudo systemctl enable apache2
+  sudo systemctl start apache2
+  ```
+- Step 3: Install Mariadb
+  ```sh
+  sudo apt install mariadb-server mariadb-client -y
+  sudo systemctl enable mariadb
+  sudo systemctl start mariadb
+  ```
+
 
 ## 🌐 Cấu hình Web Server
 Bạn có thể sử dụng Apache hoặc Nginx:
