@@ -94,6 +94,7 @@ Nextcloud là một nền tảng lưu trữ đám mây tự quản lý, giúp b�
   ```
   ### Access Web and fill some neccessary information 
   Open a browser and go to: `http://yourdomain.com` or `http://server-ip`
+  Set up an admin account, enter the newly configured database information.
 
 ## 🔒 Cấu hình SSL với Let's Encrypt
 Để bảo mật Nextcloud bằng HTTPS, xem hướng dẫn tại [docs/ssl.md](docs/ssl.md).
