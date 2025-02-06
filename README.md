@@ -1,15 +1,14 @@
 # 🚀 Nextcloud Setup Guide
 
-Hướng dẫn chi tiết cài đặt, cấu hình và quản lý Nextcloud trên máy chủ riêng hoặc VPS.
-### 🛠 Thành phần cần thiết
-Trước khi cài đặt, bạn cần chuẩn bị các thành phần sau:
-- **Hệ điều hành**: Ubuntu 20.04/22.04, Debian, CentOS hoặc tương đương
-- **Web Server**: Apache hoặc Nginx
-- **Cơ sở dữ liệu**: MySQL/MariaDB hoặc PostgreSQL
-- **PHP**: Phiên bản PHP 8.x và các module cần thiết
-- **SSL Certificate**: Let's Encrypt hoặc chứng chỉ SSL khác (khuyến nghị)
-- **Bộ nhớ lưu trữ**: HDD/SSD đủ dung lượng
-- **Tường lửa**: Mở các cổng cần thiết (80, 443)
+Introducing details of installing, configuring and managing Nextcloud on a private server or VPS.
+
+### 🛠 Neccessary components
+- **Operating System**: Ubuntu 20.04/22.04, Debian, CentOS...
+- **Web Server**: Apache
+- **Database**: MySQL/MariaDB
+- **PHP**: PHP 8.x and neccessary module
+- **SSL Certificate**: Let's Encrypt
+- **Firewall**: Open neccessary ports (80, 443)
 ## 📌 Mục lục
 - [Giới thiệu](#giới-thiệu)
 - [Cài đặt Nextcloud](docs/setup.md)
@@ -61,7 +60,7 @@ Nextcloud là một nền tảng lưu trữ đám mây tự quản lý, giúp b�
   ```sh
   cd /var/www/html
   sudo wget https://download.nextcloud.com/server/releases/latest-26.zip
-  sudo unzip nextcloud-26.0.1.zip
+  sudo unzip latest-26.zip
   sudo chown -R www-data:www-data nextcloud
   sudo chmod -R 755 nextcloud
   ```
@@ -73,7 +72,7 @@ Nextcloud là một nền tảng lưu trữ đám mây tự quản lý, giúp b�
   #### File content
   ```sh
     <VirtualHost *:80>
-      DocumentRoot /var/www/nextcloud
+      DocumentRoot /var/www/html/nextcloud
       ServerName yourdomain.com
   
       <Directory /var/www/nextcloud/>
