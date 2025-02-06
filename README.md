@@ -18,10 +18,11 @@ Introducing details of installing, configuring and managing Nextcloud on a priva
 - [Cấu hình SSL với Let's Encrypt](docs/ssl.md)
 - [Backup và Restore dữ liệu](docs/backup.md)
 
-## 📖 Giới thiệu
-Nextcloud là một nền tảng lưu trữ đám mây tự quản lý, giúp bạn đồng bộ và chia sẻ tệp một cách an toàn.
+## 📖 Introduction
 
-## 📥 Cài đặt Nextcloud
+Nextcloud is an open source platform that allows you to deploy a service to store and share personal data on a private server, similar to Google Drive or Dropbox but with complete control over the data. It is designed to secure information and meet the cloud storage needs of individuals, organizations, or businesses.
+
+## 📥 Install Nextcloud
 ### Update and install neccessary packages
 - Step 1: System update
     ```sh
@@ -51,8 +52,8 @@ Nextcloud là một nền tảng lưu trữ đám mây tự quản lý, giúp b�
   ```
   ```sh
   CREATE DATABASE nextcloud;
-  CREATE USER 'nextclouduser'@'localhost' IDENTIFIED BY 'yourpassword';
-  GRANT ALL PRIVILEGES ON nextcloud.* TO 'nextclouduser'@'localhost';
+  CREATE USER 'nextcloud'@'localhost' IDENTIFIED BY 'nextcloud';
+  GRANT ALL PRIVILEGES ON nextcloud.* TO 'nextcloud'@'localhost';
   FLUSH PRIVILEGES;
   EXIT;
   ```
