@@ -24,7 +24,7 @@ Nextcloud là một nền tảng lưu trữ đám mây tự quản lý, giúp b�
 
 ## 📥 Cài đặt Nextcloud
 - Update and install necessary ppackages
-- ```sudo apt update && sudo apt upgrade -y```
+* ```sudo apt update && sudo apt upgrade -y```
 
 ## 🌐 Cấu hình Web Server
 Bạn có thể sử dụng Apache hoặc Nginx:
