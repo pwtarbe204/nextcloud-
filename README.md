@@ -41,6 +41,7 @@ Nextcloud là một nền tảng lưu trữ đám mây tự quản lý, giúp b�
   sudo systemctl start mariadb
   ```
 - Step 4: Config database
+  Login database
   ```sh
   sudo mysql -u root -p
   ```
@@ -52,11 +53,21 @@ Nextcloud là một nền tảng lưu trữ đám mây tự quản lý, giúp b�
   FLUSH PRIVILEGES;
   EXIT;
   ```
-
+- Step 4: Install PHP and extentions
+  ```sh
+  sudo apt install php libapache2-mod-php php-mysql php-gd php-xml php-mbstring php-curl php-zip php-intl php-bcmath php-imagick php-gmp php-apcu -y
+  ```
+- Step 5: Install Nextcloud
+  ```sh
+  cd /var/www/html
+  sudo wget [https://download.nextcloud.com/server/releases/nextcloud-26.0.1.zip](https://download.nextcloud.com/server/releases/latest-26.zip)
+  sudo unzip nextcloud-26.0.1.zip
+  sudo chown -R www-data:www-data nextcloud
+  sudo chmod -R 755 nextcloud
+  ```
 ## 🌐 Cấu hình Web Server
-Bạn có thể sử dụng Apache hoặc Nginx:
-- [Cấu hình Apache](docs/apache.md)
-- [Cấu hình Nginx](docs/nginx.md)
+  Configure Apache
+
 
 ## 🔒 Cấu hình SSL với Let's Encrypt
 Để bảo mật Nextcloud bằng HTTPS, xem hướng dẫn tại [docs/ssl.md](docs/ssl.md).
