@@ -66,11 +66,11 @@ Nextcloud là một nền tảng lưu trữ đám mây tự quản lý, giúp b�
   sudo chmod -R 755 nextcloud
   ```
 ## 🌐 Cấu hình Web Server
-  ###Configure Apache
+  ### Configure Apache
   ```sh
   sudo nano /etc/apache2/sites-available/nextcloud.conf
   ```
-  ###File content
+  ### File content
   ```sh
     <VirtualHost *:80>
       DocumentRoot /var/www/nextcloud
@@ -86,13 +86,13 @@ Nextcloud là một nền tảng lưu trữ đám mây tự quản lý, giúp b�
       CustomLog ${APACHE_LOG_DIR}/nextcloud_access.log combined
     </VirtualHost>
   ```
-  ###Active configuration
+  ### Active configuration
   ```sh
   sudo a2ensite nextcloud.conf
   sudo a2enmod rewrite headers env dir mime
   sudo systemctl restart apache2
   ```
-  ###Access Web and fill some neccessary information 
+  ### Access Web and fill some neccessary information 
   Open a browser and go to: `http://yourdomain.com` or `http://server-ip`
 
 ## 🔒 Cấu hình SSL với Let's Encrypt
