@@ -40,7 +40,18 @@ Nextcloud là một nền tảng lưu trữ đám mây tự quản lý, giúp b�
   sudo systemctl enable mariadb
   sudo systemctl start mariadb
   ```
-
+- Step 4: Config database
+  ```sh
+  sudo mysql -u root -p
+  ```
+  Create database
+  ```sh
+  CREATE DATABASE nextcloud;
+  CREATE USER 'nextclouduser'@'localhost' IDENTIFIED BY 'yourpassword';
+  GRANT ALL PRIVILEGES ON nextcloud.* TO 'nextclouduser'@'localhost';
+  FLUSH PRIVILEGES;
+  EXIT;
+  ```
 
 ## 🌐 Cấu hình Web Server
 Bạn có thể sử dụng Apache hoặc Nginx:
