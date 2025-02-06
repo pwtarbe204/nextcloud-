@@ -60,14 +60,38 @@ Nextcloud là một nền tảng lưu trữ đám mây tự quản lý, giúp b�
 - Step 5: Install Nextcloud
   ```sh
   cd /var/www/html
-  sudo wget [https://download.nextcloud.com/server/releases/nextcloud-26.0.1.zip](https://download.nextcloud.com/server/releases/latest-26.zip)
+  sudo wget https://download.nextcloud.com/server/releases/latest-26.zip
   sudo unzip nextcloud-26.0.1.zip
   sudo chown -R www-data:www-data nextcloud
   sudo chmod -R 755 nextcloud
   ```
 ## 🌐 Cấu hình Web Server
   Configure Apache
-
+  ```sh
+  sudo nano /etc/apache2/sites-available/nextcloud.conf
+  ```
+  File content
+  ```sh
+    <VirtualHost *:80>
+      DocumentRoot /var/www/nextcloud
+      ServerName yourdomain.com
+  
+      <Directory /var/www/nextcloud/>
+          Require all granted
+          AllowOverride All
+          Options FollowSymLinks MultiViews
+      </Directory>
+  
+      ErrorLog ${APACHE_LOG_DIR}/nextcloud_error.log
+      CustomLog ${APACHE_LOG_DIR}/nextcloud_access.log combined
+    </VirtualHost>
+  ```
+  Active configuration
+  ```sh
+  sudo a2ensite nextcloud.conf
+  sudo a2enmod rewrite headers env dir mime
+  sudo systemctl restart apache2
+  ```
 
 ## 🔒 Cấu hình SSL với Let's Encrypt
 Để bảo mật Nextcloud bằng HTTPS, xem hướng dẫn tại [docs/ssl.md](docs/ssl.md).
