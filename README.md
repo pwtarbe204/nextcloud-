@@ -1,6 +1,6 @@
 # 🚀 Nextcloud Setup Guide
 
-Hướng dẫn chi tiết cài đặt, cấu hình và quản lý Nextcloud trên máy chủ riêng hoặc VPS.
+Nextcloud là một nền tảng mã nguồn mở cho phép bạn triển khai dịch vụ lưu trữ và chia sẻ dữ liệu cá nhân trên máy chủ riêng, tương tự như Google Drive hay Dropbox nhưng với khả năng kiểm soát hoàn toàn dữ liệu. Nó được thiết kế để bảo mật thông tin và đáp ứng nhu cầu lưu trữ đám mây của cá nhân, tổ chức, hoặc doanh nghiệp.
 
 ## 📌 Mục lục
 - [Introduction](#giới-thiệu)
